@@ -1,0 +1,33 @@
+.inputContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 80%;
+}
+
+.inputStyle {
+  border: 1px solid black;
+}
+
+.transcribeButtonStyle {
+  outline: none;
+  border: 3px solid black;
+  padding: 10px;
+  font-weight: bold;
+  color: black;
+  background: white;
+  margin: 20px auto;
+  width: 50%;
+  min-width: 50%;
+}
+
+.transcribeButtonStyle:hover {
+  color: white;
+  background: black;
+}
+
+.transcribeButtonStyle:active {
+  color: black;
+  background: #00DBEE;
+}

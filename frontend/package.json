@@ -1,0 +1,38 @@
+{
+  "name": "written-word",
+  "version": "",
+  "description": "",
+  "main": "index.jsx",
+  "author": "John Campbell",
+  "license": "",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "start": "webpack --watch",
+    "start:dev": "npx webpack serve",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "axios": "^0.21.1",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
+  },
+  "devDependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@testing-library/react": "^11.2.1",
+    "css-loader": "^5.0.1",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.6",
+    "path": "^0.12.7",
+    "style-loader": "^2.0.0",
+    "supertest": "^6.0.1",
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
