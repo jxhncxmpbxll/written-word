@@ -1,4 +1,4 @@
-def download_video_series(video_link):
+def download(video_link):
 
   r = requests.get(video_link, stream = True)
 
@@ -7,6 +7,6 @@ def download_video_series(video_link):
           if chunk:
               f.write(chunk)
 
-  print "downloaded!\n"
+  print "video download complete!"
 
 return
