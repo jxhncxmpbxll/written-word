@@ -7,6 +7,6 @@ def download_video_series(video_link):
           if chunk:
               f.write(chunk)
 
-  print "%s downloaded!\n"
+  print "downloaded!\n"
 
 return
