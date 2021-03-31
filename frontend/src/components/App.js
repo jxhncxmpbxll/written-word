@@ -28,6 +28,18 @@ class App extends Component {
     this.setState({showProgress: true});
   }
 
+  handleTranscribeButton() {
+    axios.post('/api/download/mp4', {
+      url: this.state.inputURL
+    })
+    .then((response) => {
+      console.log(response)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+  }
+
   render() {
     return (
       <div className={styles.mainContainer}>

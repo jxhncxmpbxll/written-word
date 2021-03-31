@@ -11,14 +11,21 @@ def serve(path):
 
 @app.route('/api/download/mp4', methods=['POST'])
 def download_mp4():
-  link = request.data
+  r = request.get_json()
+  link = r['link']
   dl(link)
 
-@app.route('/api/download/txt')
+@app.route('/api/download/txt', methods=['POST'])
 def download_txt():
     return send_file('output/transcript.txt',
                      mimetype='text/csv',
                      attachment_filename='transcript.txt',
                      as_attachment=True)
+
+@app.route('/test', methods=['POST'])
+def test():
+    sample = request.data
+    return sample
+
 
 app.run(debug=True)
