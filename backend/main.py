@@ -9,13 +9,13 @@ def serve(path):
     return send_from_directory(app.static_folder, 'index.html')
 
 
-@app.route('/download/mp4', methods=['POST'])
-def download():
+@app.route('/api/download/mp4', methods=['POST'])
+def download_mp4():
   link = request.data
-    dl(link)
+  dl(link)
 
-@app.server.route('/api/download/txt')
-def download():
+@app.route('/api/download/txt')
+def download_txt():
     return send_file('output/transcript.txt',
                      mimetype='text/csv',
                      attachment_filename='transcript.txt',

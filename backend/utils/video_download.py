@@ -1,12 +1,20 @@
+import validators
+
 def download(video_link):
 
-  r = requests.get(video_link, stream = True)
+  if validators.url(video_link):
 
-  with open('temp', 'wb') as f:
-      for chunk in r.iter_content(chunk_size = 1024*1024):
-          if chunk:
-              f.write(chunk)
+    r = requests.get(video_link, stream = True)
 
-  print "video download complete!"
+    with open('temp', 'wb') as f:
+        for chunk in r.iter_content(chunk_size = 360*360):
+            if chunk:
+                f.write(chunk)
 
-return
+    print("video download complete!")
+
+    return
+
+  else: print("invalid url!")
+
+  return
